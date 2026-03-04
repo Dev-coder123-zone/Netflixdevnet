@@ -10,7 +10,7 @@ const Login=()=> {
       
       <img
         className="absolute top-6 left-10 w-32 z-10"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+        src="https://static.tvmaze.com/images/tvm-header-logo.png"
         alt="logo"
       />
   
@@ -19,7 +19,7 @@ const Login=()=> {
         <div className="bg-black bg-opacity-75 p-12 rounded-md w-[350px]">
           
           <h1 className="text-white text-3xl font-bold mb-6">
-            Sign In
+            Log in
           </h1>
 
           <form className="flex flex-col gap-4">

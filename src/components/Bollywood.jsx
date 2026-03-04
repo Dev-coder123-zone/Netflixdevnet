@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 const Bollywood = () => {
 
   const Noti = () => {
-    toast.error("Network Error")
+    toast.success("Please wait ...")
   }
 
   const m1 = [
@@ -250,7 +250,7 @@ const Bollywood = () => {
 
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-lg sm:text-xl font-bold">
-                    $ 9.99
+                    $ 3.99
                   </span>
 
                   <button
@@ -263,7 +263,7 @@ const Bollywood = () => {
 
                 <a
                   href="#"
-                  className="mt-3 text-center font-bold underline border-2 border-blue-400 rounded-xl py-2 hover:bg-blue-500 hover:text-white transition-all duration-300 active:scale-95"
+                  className="mt-3 text-center font-bold text-blue-400 border-1 border-blue-400 rounded-xl py-2 hover:bg-blue-500 hover:text-white transition-all duration-300 active:scale-95"
                 >
                   Watch Now
                 </a>
@@ -274,8 +274,100 @@ const Bollywood = () => {
       </div>
 
       <ToastContainer />
+      <Footer/>
     </>
   )
 }
+
+
+
+
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+
+const Footer = () => {
+  return (
+    <footer className="bg-black text-gray-300 pt-12 pb-6 px-6 md:px-16">
+      <div className="grid md:grid-cols-5 gap-10">
+
+      
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-4">🎬 TVMAZE</h2>
+          <p className="text-sm leading-6">
+            Watch the latest movies, trending series, and exclusive originals
+            anytime, anywhere. Unlimited entertainment.
+          </p>
+        </div>
+
+        
+        <div>
+          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-red-500 cursor-pointer">Home</li>
+            <li className="hover:text-red-500 cursor-pointer">Movies</li>
+            <li className="hover:text-red-500 cursor-pointer">TV Shows</li>
+            <li className="hover:text-red-500 cursor-pointer">Trending</li>
+            <li className="hover:text-red-500 cursor-pointer">Contact</li>
+          </ul>
+        </div>
+
+      
+        <div>
+          <h3 className="text-white font-semibold mb-4">Genres</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Action</li>
+            <li>Comedy</li>
+            <li>Drama</li>
+            <li>Horror</li>
+            <li>Romance</li>
+          </ul>
+        </div>
+
+    
+        <div>
+          <h3 className="text-white font-semibold mb-4">Latest Movies</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Avatar 2</li>
+            <li>John Wick 4</li>
+            <li>Oppenheimer</li>
+            <li>Pathaan</li>
+          </ul>
+        </div>
+
+        
+        <div>
+          <h3 className="text-white font-semibold mb-4">Subscribe</h3>
+          <p className="text-sm mb-3">
+            Get updates on new releases & offers.
+          </p>
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter Email"
+              className="px-3 py-2 w-full text-black rounded-l-md outline-none"
+            />
+            <button className="bg-red-600 px-4 rounded-r-md hover:bg-red-700">
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+
+    
+      <div className="flex justify-between items-center mt-10 border-t border-gray-700 pt-6 flex-col md:flex-row gap-4">
+        <p className="text-sm">
+          © {new Date().getFullYear()} TVMAZE. All Rights Reserved.
+        </p>
+
+        <div className="flex gap-4 text-lg">
+          <FaFacebookF className="hover:text-red-500 cursor-pointer" />
+          <FaInstagram className="hover:text-red-500 cursor-pointer" />
+          <FaTwitter className="hover:text-red-500 cursor-pointer" />
+          <FaYoutube className="hover:text-red-500 cursor-pointer" />
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 
 export default Bollywood

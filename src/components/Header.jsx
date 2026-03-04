@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ToastContainer,toast } from 'react-toastify'
 import {useState } from 'react'
 import axios from 'axios'
-
+import { FaSearch } from "react-icons/fa";
 const Header = () => {
  
    const [Movies, setMovies] = useState([])
@@ -27,7 +27,7 @@ const handleSubmit=(e)=>{
 e.preventDefault();
 fetchData();
 setinput_p("")
-toast.warning("Movie not found !")
+toast.success("TVMAZE");
 }
 
   return (
@@ -69,7 +69,7 @@ toast.warning("Movie not found !")
         <h1 className='font-bold'>Watching Time: {elem.runtime || "Not show"}</h1>
 
         <div className='flex justify-between items-center mt-4'>
-          <h1 className='text-2xl hover:text-red-500'>$ 9.99</h1>
+          <h1 className='text-2xl hover:text-red-500'>$ 3.99</h1>
           <button
           className='font-bold border-2 h-12 w-24 rounded-md hover:bg-blue-500 hover:text-white transition-all duration-300 active:scale-95'>
             Pay now
@@ -78,7 +78,7 @@ toast.warning("Movie not found !")
 
         <a 
           href={elem.url} 
-          className='mt-4 font-bold underline hover:bg-blue-500 hover:text-white border-blue-400 w-full h-12 border-2 flex justify-center rounded-2xl items-center transition-all duration-300 active:scale-95'>
+          className='mt-4 font-bold text-blue-400 hover:bg-blue-500 hover:text-white border-blue-400 w-full h-12 border-1 flex justify-center rounded-2xl items-center transition-all duration-300 active:scale-95'>
           Watch now
         </a>
 
@@ -88,15 +88,11 @@ toast.warning("Movie not found !")
       })}
     </div>
 
-    {/* Header Section */}
+  
     <header className='h-14 w-full bg-gray-900 text-white font-bold flex items-center justify-between px-4 fixed left-0 top-0 z-50'>
 
-      <Link to={'/'} className='text-red-500'>
-      <img
-        className="w-28"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-        alt="logo"
-      />
+      <Link to={'/'} >
+        <img src="https://static.tvmaze.com/images/tvm-header-logo.png" className='h-12 w-24 object-contain sm:w-32 md:w-40' />
       </Link>
 
      <div className='flex items-center gap-2 w-full max-w-xs md:max-w-sm'>
@@ -111,19 +107,13 @@ toast.warning("Movie not found !")
        />
       <button 
         onClick={handleSubmit}
-        className='border-2 h-10 w-20 md:h-12 md:w-24 rounded-lg active:border-red-500'>
-        Search
+        className=' hover:cursor-pointer md:h-12 md:w-8 r'>
+<FaSearch />
       </button>
      </div>
 
      {/* Desktop Links */}
-     <div className="hidden md:flex gap-4">
-       <Link to={'/'} className='hover:text-green-500 hover:scale-110 transition'>Home</Link>
-       <Link to={'/bollywood'} className='hover:text-green-500 hover:scale-110 transition'>Bollywood</Link>
-       <Link to={'/about'} className='hover:text-green-500 hover:scale-110 transition'>About</Link>
-       <Link to={'/marvel'} className='hover:text-green-500 hover:scale-110 transition'>Marvel fan's</Link>
-       <Link to={'/login'} className='hover:text-green-500 hover:scale-110 transition'>Sign In</Link>
-     </div>
+    
 
     </header>
 

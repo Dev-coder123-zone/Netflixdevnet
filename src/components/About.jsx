@@ -83,7 +83,7 @@ function About() {
       {/* Developer Section */}
       <div className="py-12 text-center border-t border-gray-800">
         <h3 className="text-xl font-semibold hover:underline">
-          Developed by <span className="text-red-500">ATUL panchal</span>
+          Developed by <span className="text-red-500">Dev Panchal</span>
         </h3>
         <p className="text-gray-500 mt-2">
           MERN Stack Developer | React | Node | Express | MongoDB | Typescript | Javascript | SQL | Java

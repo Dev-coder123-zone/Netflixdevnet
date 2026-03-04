@@ -8,19 +8,16 @@ import Header2 from './components/Header2'
 import Marvel from './components/Marvel'
 import Bollywood from './components/Bollywood'
 import Login from './components/Login'
-//import Netflix from './components/Netflix'
-//import Search from './components/Search'
+
 const App = () => {
-
-
-
   return (
     <>
 <Header/>
+<Header2/>
 <marquee className='text-red-500 relative top-20 font-bold'> 
   <img
         className=" left-10 h-5 w-32 z-10"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+        src="https://static.tvmaze.com/images/tvm-header-logo.png" 
        alt="logo"
       />
       </marquee>
